@@ -6,8 +6,15 @@
 		$software = $_POST['softwareInput'];
 		$priority = $_POST['priorityInput'];
 
-		$sql = "INSERT INTO bugs (description, software, priority, timestamp, user) 
-				VALUES ('$description', '$software', '$priority', current_timestamp(), 'admin');";
+		// Use session from previous page to retrieve id value without having to query database again
+		session_start();
+		$id  = $_SESSION['id'];
+
+		$sql = "UPDATE `bugs` 
+				SET `description` = '$description', 
+					`software` = '$software', 
+					`priority` = '$priority' 
+				WHERE `bugs`.`id` =  $id";
 
 		$result = mysqli_query($conn, $sql);	
 	} else {

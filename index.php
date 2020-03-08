@@ -39,6 +39,7 @@
 										<th scope="col">Priority</th>
 										<th scope="col">Created</th>
 										<th scope="col">User</th>
+										<th scope="col">Modify</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -57,6 +58,8 @@
 														<td>" . $row["priority"] . "</td>
 														<td>" . $row["timestamp"] . "</td>
 														<td>" . $row["user"] . "</td>
+														<td><a href='modify.php?reference=" . $row["id"] . "'>Update</a>" . " " .
+														"<a href='update.php'>Delete</a></td>
 													</tr>";
 											}
 										} else {
