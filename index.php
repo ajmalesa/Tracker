@@ -59,7 +59,7 @@
 														<td>" . $row["timestamp"] . "</td>
 														<td>" . $row["user"] . "</td>
 														<td><a href='modify.php?reference=" . $row["id"] . "'>Update</a>" . " " .
-														"<a href='update.php'>Delete</a></td>
+														"<a href='delete.php?reference=" . $row["id"] . "'>Delete</a></td>
 													</tr>";
 											}
 										} else {
