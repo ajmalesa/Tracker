@@ -53,11 +53,11 @@
 												echo 
 													"<tr>
 														<th scope='row'>" . $row["id"] . "</th>
-														<td>" . $row["software"] . "</td>
+														<td>" . htmlspecialchars($row["software"]) . "</td>
 														<td>" . $row["description"] . "</td>
 														<td>" . $row["priority"] . "</td>
 														<td>" . $row["timestamp"] . "</td>
-														<td>" . $row["user"] . "</td>
+														<td>" . htmlspecialchars($row["user"]) . "</td>
 														<td><a href='modify.php?reference=" . $row["id"] . "'>Update</a>" . " " .
 														"<a href='delete.php?reference=" . $row["id"] . "'>Delete</a></td>
 													</tr>";
